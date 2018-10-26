@@ -1,0 +1,15 @@
+source /etc/network/interfaces.d/*
+
+# Wired adapter #1
+allow-hotplug eth0
+#no-auto-down eth0
+iface eth0 inet static
+	address 192.168.1.164
+	netmask 255.255.255.0
+	gateway 192.168.1.1
+	network 192.168.0.0
+	broadcast 192.168.0.225
+	dns-nameservers 192.168.1.1 8.8.8.8
+
+auto lo
+iface lo inet loopback
